@@ -5,10 +5,13 @@ public class Rectangle extends Shape {
     protected double height;
 
     Rectangle(String color, double widht, double height){
-        super(color);
+        super(color); //need clarity
+        //super();
+        //super.shape(color);
         this.widht = widht;
         this.height = height;
     }
+
 
     @Override
     public double getArea() {

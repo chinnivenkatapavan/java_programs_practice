@@ -22,6 +22,8 @@ public class Mainclass {
         Shape rectangle_shape = new Rectangle("pink",10,5);
         System.out.println("Color: " +rectangle_shape.getColor()+ "area: " +rectangle_shape.getArea());
 
+
+
     }
 
 }

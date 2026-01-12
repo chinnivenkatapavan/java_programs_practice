@@ -1,5 +1,6 @@
 package com.java.workshop_OOPs.inheritances;
 
+import com.java.workshop_OOPs.Static.WaitUtils;
 import com.java.workshop_OOPs.abstraction.GooglePay;
 import com.java.workshop_OOPs.abstraction.Payment;
 import com.java.workshop_OOPs.abstraction.PhonePe;
@@ -13,6 +14,9 @@ public class LoginTest extends BaseTest {
 
         //creating object loginPage
         LoginPage loginpage = new LoginPage();
+
+        //Waiting to visible element
+        WaitUtils.waitForVisible("driver","element",10);
 
         //creating object for abstraction_class
         Payment gpaypay = new GooglePay();

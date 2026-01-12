@@ -8,6 +8,10 @@ public class CreditCard implements Payment{
         this.cardNumber = cardNumber;
     }
 
+//    public String setCardNumber(String cardNumber){
+//        this.cardNumber = cardNumber;
+//    }
+
     @Override
     public boolean processPayment(double amount) {
         System.out.println("Processing $" + amount + "via credit card ");

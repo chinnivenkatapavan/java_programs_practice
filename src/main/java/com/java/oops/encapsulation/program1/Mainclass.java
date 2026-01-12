@@ -4,9 +4,13 @@ public class Mainclass {
 
     public static void main(String[] args){
         Student student = new Student();
-        student.setName("Sunkara");
+        student.setName("daya");
         student.setGrade('A');
 
         System.out.println("Student_Name:" + student.getName() + " Grade: " +student.getGrade());
+
+        //student.name = "daya";
+
+
     }
 }

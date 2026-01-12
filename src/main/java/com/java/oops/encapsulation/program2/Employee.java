@@ -8,7 +8,7 @@ public class Employee {
     public String getName(){return name;}
     public double getSalary(){return salary;}
 
-    public Employee(String name, double salary){
+    Employee(String name, double salary){
         this.name = name;
         setSalary(salary);
 
