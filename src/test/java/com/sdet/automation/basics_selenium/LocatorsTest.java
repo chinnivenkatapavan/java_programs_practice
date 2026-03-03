@@ -1,5 +1,6 @@
 package com.sdet.automation.basics_selenium;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import java.sql.Driver;
+import java.time.Duration;
 import java.util.List;
 
 public class LocatorsTest {
@@ -18,20 +20,25 @@ public class LocatorsTest {
     public void locatorExample() throws InterruptedException{
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+
         driver.get("https://www.saucedemo.com/");
+
+
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.name("password")).sendKeys("secret_sauce");
         driver.findElement(By.className("btn_action")).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
         WebElement dropDownElement = driver.findElement(By.xpath("//select[@data-test=\"product-sort-container\"]"));
         Select dropDown = new Select(dropDownElement);
         List<WebElement> allOptions = dropDown.getOptions();
 
         for(WebElement option : allOptions){
-            System.out.println(option.getText());
+            //System.out.println(option.getText());
         }
 
         //dropDown.selectByIndex(1);
@@ -45,16 +52,27 @@ public class LocatorsTest {
         System.out.println(getAddtoCart.size());
 
         for(WebElement button : getAddtoCart){
-            System.out.println(button.getRect());
+            //System.out.println(button.getRect());
         }
-        getAddtoCart.get(2).click();
-        Thread.sleep(2000);
+        getAddtoCart.get(1).click();
+
+
         driver.findElement(By.xpath("//button[contains(text(),\"Remove\")]")).click();
 
-        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("button[id$=\"shirt-(red)\"]")).click();
+
         driver.findElement(By.xpath("//a[starts-with(@class,\"shopping_cart_link\")]")).click();
+        driver.findElement(By.cssSelector("button[name*=\"remove\"]")).click();
+        driver.findElement(By.xpath("//button[text()=\"Continue Shopping\"]")).click();
+        driver.findElement(By.cssSelector("button[name$=\"backpack\"]")).click();
+        driver.findElement(By.xpath("//a[starts-with(@class,\"shopping_cart_link\")]")).click();
+
+        driver.findElement(By.xpath("//button[text()=\"Checkout\"]")).click();
         Thread.sleep(5000);
+
         driver.quit();
     }
 
 }
+
+
