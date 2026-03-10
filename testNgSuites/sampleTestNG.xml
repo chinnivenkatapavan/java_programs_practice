@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="sample">
+    <test name="SmokeTest">
+        <classes>
+        <class name="com.sdet.automation.testNG.SampleTest1" />
+        <class name="com.sdet.automation.testNG.SampleTest2" />
+        </classes>
+    </test>
+</suite>
