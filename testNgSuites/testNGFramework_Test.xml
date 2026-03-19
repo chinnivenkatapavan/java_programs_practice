@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="testNGFrameWork Suite">
+    <test name="TestNG_Test">
+        <classes>
+            <class name="com.sdet.automation.testNGFramework.LoginTest"/>
+            <parameter name="userName" value="standard_user"/>
+            <parameter name="passWord" value="secret_sauce"/>
+        </classes>
+    </test>
+</suite>
+

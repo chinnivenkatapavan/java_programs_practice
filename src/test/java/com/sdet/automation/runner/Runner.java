@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"com.sdet.automation.cucumberBDD.steps"},
+        glue = {"com.sdet.automation.cucumberBDD.steps" , "com.java.hooks"},
         tags = "@ADO17"
 )
 
